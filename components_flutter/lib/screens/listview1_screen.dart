@@ -10,8 +10,6 @@ class Listview1Screen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Center(child: Text("Listview Tipo 1")),
-          elevation: 0,
-          backgroundColor: Colors.indigo,
         ),
         body: ListView.separated(
           itemCount: options.length,
