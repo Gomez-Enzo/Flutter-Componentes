@@ -41,8 +41,9 @@ class AppRoutes {
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
     for (final option in menuOptions) {
-      appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
+      appRoutes.addAll({option.route: (BuildContext context) => option.screen});
     }
     return appRoutes;
   }
